@@ -16,3 +16,6 @@ samples, guidance on mobile development, and a full API reference.
 
 ## Android Studio
 Open plugin/example/android instead of plugin/android.
+
+
+flutter pub add hello_plugin --git-url=https://github.com/Richard-Van-Intania/hello_plugin
