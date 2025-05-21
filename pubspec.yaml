@@ -1,11 +1,11 @@
 name: hello_plugin
 description: "A new Flutter plugin project."
 version: 0.0.1
-homepage:
+homepage: https://github.com/Richard-Van-Intania/hello_plugin
 
 environment:
   sdk: ^3.8.0
-  flutter: '>=3.3.0'
+  flutter: ">=3.3.0"
 
 dependencies:
   flutter:
