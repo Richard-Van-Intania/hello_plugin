@@ -26,4 +26,8 @@ abstract class HelloPluginPlatform extends PlatformInterface {
   Future<String?> getPlatformVersion() {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }
+
+  Future<double?> getDistance(double x1, double y1, double x2, double y2) {
+    throw UnimplementedError('getDistance() has not been implemented.');
+  }
 }

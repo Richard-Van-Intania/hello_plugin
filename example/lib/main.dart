@@ -51,7 +51,25 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(title: const Text('Plugin example app')),
-        body: Center(child: Text('Running on: $_platformVersion\n')),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('Running on: $_platformVersion\n'),
+            Container(
+              alignment: Alignment.center,
+              child: FutureBuilder<double?>(
+                future: _helloPlugin.getDistance(0.0, 0.0, 7.0, 24.0),
+                builder: (context, snapshot) {
+                  if (snapshot.connectionState == ConnectionState.done && snapshot.hasData) {
+                    return Text('Distance is: ${snapshot.data}');
+                  } else {
+                    return CircularProgressIndicator();
+                  }
+                },
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

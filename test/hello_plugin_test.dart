@@ -7,6 +7,12 @@ import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 class MockHelloPluginPlatform with MockPlatformInterfaceMixin implements HelloPluginPlatform {
   @override
   Future<String?> getPlatformVersion() => Future.value('42');
+
+  @override
+  Future<double?> getDistance(double x1, double y1, double x2, double y2) {
+    // TODO: implement getDistance
+    throw UnimplementedError();
+  }
 }
 
 void main() {
