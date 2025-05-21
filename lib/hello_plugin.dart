@@ -1,4 +1,3 @@
-
 import 'hello_plugin_platform_interface.dart';
 
 class HelloPlugin {
