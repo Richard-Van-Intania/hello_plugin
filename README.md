@@ -19,3 +19,6 @@ Open plugin/example/android instead of plugin/android.
 
 
 flutter pub add hello_plugin --git-url=https://github.com/Richard-Van-Intania/hello_plugin
+
+
+Open plugin/example/android instead of plugin/android.
