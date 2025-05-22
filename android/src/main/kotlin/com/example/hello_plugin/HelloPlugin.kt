@@ -28,7 +28,7 @@ class HelloPlugin : FlutterPlugin, MethodCallHandler {
 
   override fun onMethodCall(call: MethodCall, result: Result) {
     when (call.method) {
-      "getPlatformVersion" -> result.success("Android ${android.os.Build.VERSION.RELEASE}")
+      "getPlatformVersion" -> result.success("Android ${Build.VERSION.RELEASE}")
       "getDistance" -> {
         val x1 = call.argument<Double>("x1")!!
         val y1 = call.argument<Double>("y1")!!
