@@ -8,4 +8,8 @@ class HelloPlugin {
   Future<double?> getDistance(double x1, double y1, double x2, double y2) async {
     return HelloPluginPlatform.instance.getDistance(x1, y1, x2, y2);
   }
+
+  Future<int?> getAppVersionCode() async {
+    return HelloPluginPlatform.instance.getAppVersionCode();
+  }
 }

@@ -55,6 +55,7 @@ class _MyAppState extends State<MyApp> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text('Running on: $_platformVersion\n'),
+            SizedBox(height: 32.0),
             Container(
               alignment: Alignment.center,
               child: FutureBuilder<double?>(
@@ -62,6 +63,20 @@ class _MyAppState extends State<MyApp> {
                 builder: (context, snapshot) {
                   if (snapshot.connectionState == ConnectionState.done && snapshot.hasData) {
                     return Text('Distance is: ${snapshot.data}');
+                  } else {
+                    return CircularProgressIndicator();
+                  }
+                },
+              ),
+            ),
+            SizedBox(height: 48.0),
+            Container(
+              alignment: Alignment.center,
+              child: FutureBuilder<int?>(
+                future: _helloPlugin.getAppVersionCode(),
+                builder: (context, snapshot) {
+                  if (snapshot.connectionState == ConnectionState.done && snapshot.hasData) {
+                    return Text('AppVersionCode is: ${snapshot.data}');
                   } else {
                     return CircularProgressIndicator();
                   }

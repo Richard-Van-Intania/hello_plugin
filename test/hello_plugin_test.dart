@@ -13,6 +13,12 @@ class MockHelloPluginPlatform with MockPlatformInterfaceMixin implements HelloPl
     // TODO: implement getDistance
     throw UnimplementedError();
   }
+
+  @override
+  Future<int?> getAppVersionCode() {
+    // TODO: implement getAppVersionCode
+    throw UnimplementedError();
+  }
 }
 
 void main() {
