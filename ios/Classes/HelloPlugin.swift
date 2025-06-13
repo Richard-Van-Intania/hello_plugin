@@ -59,6 +59,12 @@ public class HelloPlugin: NSObject, FlutterPlugin {
                 .responseData { response in
                     result(response.response?.statusCode ?? 0)
                 }
+
+        case "TDL":
+            DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+                result(200)
+            }
+
         default:
             result(FlutterMethodNotImplemented)
         }

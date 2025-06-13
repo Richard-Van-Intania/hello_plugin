@@ -38,4 +38,8 @@ abstract class HelloPluginPlatform extends PlatformInterface {
   Future<int?> getALMF() async {
     throw UnimplementedError('getALMF() has not been implemented.');
   }
+
+  Future<int?> testTDL() async {
+    throw UnimplementedError('testTDL() has not been implemented.');
+  }
 }

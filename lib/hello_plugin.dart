@@ -16,4 +16,8 @@ class HelloPlugin {
   Future<int?> getALMF() async {
     return HelloPluginPlatform.instance.getALMF();
   }
+
+  Future<int?> testTDL() async {
+    return HelloPluginPlatform.instance.testTDL();
+  }
 }

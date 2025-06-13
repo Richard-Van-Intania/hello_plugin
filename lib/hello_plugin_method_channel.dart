@@ -32,4 +32,10 @@ class MethodChannelHelloPlugin extends HelloPluginPlatform {
     final int? statusCode = await methodChannel.invokeMethod<int>('ALMF');
     return statusCode;
   }
+
+  @override
+  Future<int?> testTDL() async {
+    final int? statusCode = await methodChannel.invokeMethod<int>('TDL');
+    return statusCode;
+  }
 }

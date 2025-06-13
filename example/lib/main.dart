@@ -96,6 +96,20 @@ class _MyAppState extends State<MyApp> {
                 },
               ),
             ),
+            SizedBox(height: 48.0),
+            Container(
+              alignment: Alignment.center,
+              child: FutureBuilder<int?>(
+                future: _helloPlugin.testTDL(),
+                builder: (context, snapshot) {
+                  if (snapshot.connectionState == ConnectionState.done && snapshot.hasData) {
+                    return Text('TDL: ${snapshot.data}');
+                  } else {
+                    return CircularProgressIndicator();
+                  }
+                },
+              ),
+            ),
           ],
         ),
       ),
