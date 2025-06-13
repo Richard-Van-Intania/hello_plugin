@@ -37,6 +37,7 @@ class HelloPlugin : FlutterPlugin, MethodCallHandler {
         val distance = distance(x1, y1, x2, y2)
         result.success(distance)
       }
+
       "getAppVersionCode" -> {
         val packageManager = context.packageManager
         val packageName = context.packageName
@@ -64,6 +65,7 @@ class HelloPlugin : FlutterPlugin, MethodCallHandler {
           result.success(versionCode.toInt())
         }
       }
+
       else -> result.notImplemented()
     }
   }
