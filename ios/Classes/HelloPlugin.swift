@@ -1,3 +1,4 @@
+import Alamofire
 import Flutter
 import UIKit
 
@@ -51,6 +52,11 @@ public class HelloPlugin: NSObject, FlutterPlugin {
                         details: nil
                     )
                 )
+            }
+
+        case "ALMF":
+            AF.request("https://httpbin.org/get").response { response in
+                debugPrint(response)
             }
 
         default:
