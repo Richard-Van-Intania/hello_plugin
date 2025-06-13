@@ -34,4 +34,8 @@ abstract class HelloPluginPlatform extends PlatformInterface {
   Future<int?> getAppVersionCode() async {
     throw UnimplementedError('getAppVersionCode() has not been implemented.');
   }
+
+  Future<int?> getALMF() async {
+    throw UnimplementedError('getALMF() has not been implemented.');
+  }
 }

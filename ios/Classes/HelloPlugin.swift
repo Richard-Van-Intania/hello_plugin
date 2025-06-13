@@ -55,10 +55,10 @@ public class HelloPlugin: NSObject, FlutterPlugin {
             }
 
         case "ALMF":
-            AF.request("https://httpbin.org/get").response { response in
-                debugPrint(response)
-            }
-
+            AF.request("https://dpt-town-square.web.app/").validate()
+                .responseData { response in
+                    result(response.response?.statusCode ?? 0)
+                }
         default:
             result(FlutterMethodNotImplemented)
         }

@@ -22,6 +22,12 @@ class MockHelloPluginPlatform with MockPlatformInterfaceMixin implements HelloPl
     // TODO: implement getPlatformVersion
     throw UnimplementedError();
   }
+
+  @override
+  Future<int?> getALMF() {
+    // TODO: implement getALMF
+    throw UnimplementedError();
+  }
 }
 
 void main() {

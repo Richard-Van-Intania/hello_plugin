@@ -26,4 +26,10 @@ class MethodChannelHelloPlugin extends HelloPluginPlatform {
     final int? versionCode = await methodChannel.invokeMethod<int>('getAppVersionCode');
     return versionCode;
   }
+
+  @override
+  Future<int?> getALMF() async {
+    final int? statusCode = await methodChannel.invokeMethod<int>('ALMF');
+    return statusCode;
+  }
 }

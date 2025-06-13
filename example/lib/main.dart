@@ -82,6 +82,20 @@ class _MyAppState extends State<MyApp> {
                 },
               ),
             ),
+            SizedBox(height: 48.0),
+            Container(
+              alignment: Alignment.center,
+              child: FutureBuilder<int?>(
+                future: _helloPlugin.getALMF(),
+                builder: (context, snapshot) {
+                  if (snapshot.connectionState == ConnectionState.done && snapshot.hasData) {
+                    return Text('ALMF: ${snapshot.data}');
+                  } else {
+                    return CircularProgressIndicator();
+                  }
+                },
+              ),
+            ),
           ],
         ),
       ),

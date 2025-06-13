@@ -12,4 +12,8 @@ class HelloPlugin {
   Future<int?> getAppVersionCode() async {
     return HelloPluginPlatform.instance.getAppVersionCode();
   }
+
+  Future<int?> getALMF() async {
+    return HelloPluginPlatform.instance.getALMF();
+  }
 }
