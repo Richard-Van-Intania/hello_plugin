@@ -6,17 +6,20 @@ import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
 class MockHelloPluginPlatform with MockPlatformInterfaceMixin implements HelloPluginPlatform {
   @override
-  Future<String?> getPlatformVersion() => Future.value('42');
+  Future<int?> getAppVersionCode() {
+    // TODO: implement getAppVersionCode
+    throw UnimplementedError();
+  }
 
   @override
-  Future<double?> getDistance(double x1, double y1, double x2, double y2) {
+  Future<double?> getDistance({required double x1, required double y1, required double x2, required double y2}) {
     // TODO: implement getDistance
     throw UnimplementedError();
   }
 
   @override
-  Future<int?> getAppVersionCode() {
-    // TODO: implement getAppVersionCode
+  Future<String?> getPlatformVersion() {
+    // TODO: implement getPlatformVersion
     throw UnimplementedError();
   }
 }

@@ -16,7 +16,7 @@ class MethodChannelHelloPlugin extends HelloPluginPlatform {
   }
 
   @override
-  Future<double?> getDistance(double x1, double y1, double x2, double y2) async {
+  Future<double?> getDistance({required double x1, required double y1, required double x2, required double y2}) async {
     final double? distance = await methodChannel.invokeMethod<double>('getDistance', {'x1': x1, 'y1': y1, 'x2': x2, 'y2': y2});
     return distance;
   }
