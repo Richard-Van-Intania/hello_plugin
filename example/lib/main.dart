@@ -59,7 +59,7 @@ class _MyAppState extends State<MyApp> {
             Container(
               alignment: Alignment.center,
               child: FutureBuilder<double?>(
-                future: _helloPlugin.getDistance(0.0, 0.0, 7.0, 24.0),
+                future: _helloPlugin.getDistance(15.0, 10.0, 5.0, 17.0),
                 builder: (context, snapshot) {
                   if (snapshot.connectionState == ConnectionState.done && snapshot.hasData) {
                     return Text('Distance is: ${snapshot.data}');
